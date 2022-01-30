@@ -1,5 +1,4 @@
 [ServerSettings]
-ActiveMods=793605978
 AllowFlyerCarryPvE=False
 AllowThirdPersonPlayer=True
 AlwaysNotifyPlayerLeft=False
@@ -46,7 +45,7 @@ AllowHitMarkers=True
 OverrideOfficialDifficulty=5.0
 XPMultiplier=3.0
 HarvestAmountMultiplier=2.0
-TamingSpeedMultiplier=5.0
+TamingSpeedMultiplier=3.0
 
 [/Script/ShooterGame.ShooterGameUserSettings]
 MasterAudioVolume=1.000000
@@ -124,8 +123,6 @@ Message=Welcome to FOAD's ARK Server
 Duration=5
 
 [/Script/Engine.GameSession]
-MaxPlayers=30
+MaxPlayers=70
 
 
-[MyNewSection]
-MyNewProperty=mysecondvalue

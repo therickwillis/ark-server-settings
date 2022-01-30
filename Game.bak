@@ -1,0 +1,13 @@
+[ModInstaller]
+ModIDS=793605978
+
+[/script/shootergame.shootergamemode]
+MatingIntervalMultiplier=0.5
+EggHatchSpeedMultiplier=4.0
+BabyMatureSpeedMultiplier=4.0
+BabyImprintAmountMultiplier=4.0
+HexagonRewardMultiplier=1.5
+BabyCuddleIntervalMultiplier=0.6
+bDisableStructurePlacementCollision=true
+
+
