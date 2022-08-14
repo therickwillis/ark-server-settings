@@ -13,17 +13,17 @@ function updateGameUserSettings() {
 		# todo: use a better delimiter
 		# todo: read from file
 		"[ServerSettings]=TamingSpeedMultiplier=5.0"
-		"[ServerSettings]=XPMultiplier=3.0"
+		"[ServerSettings]=XPMultiplier=4.0"
 		"[ServerSettings]=ActiveMods=$modList"		
 		"[ServerSettings]=AllowThirdPersonPlayer=True"
 		"[ServerSettings]=EnablePvPGamma=True"
 		"[ServerSettings]=DifficultyOffset=1.0"
-		"[ServerSettings]=OverrideOfficialDifficulty=5.0"
-		"[ServerSettings]=XPMultiplier=3.0"
-		"[ServerSettings]=HarvestAmountMultiplier=4.0"
-		"[ServerSettings]=TamingSpeedMultiplier=4.0"
-		"[ServerSettings]=ItemStackSizeMultiplier=4.0000"
+		"[ServerSettings]=OverrideOfficialDifficulty=5.0"		
+		"[ServerSettings]=HarvestAmountMultiplier=3.0"		
+		"[ServerSettings]=ItemStackSizeMultiplier=2.0000"
 		"[ServerSettings]=ServerCrosshair=True"
+		"[ServerSettings]=StructurePickupTimeAfterPlacement=300.00"
+		"[ServerSettings]=ShowFloatingDamageText=True"		
 		"[/Script/Engine.GameSession]=MaxPlayers=30"
 	)
 	
@@ -34,14 +34,15 @@ function updateGame() {
 	file=$1
 	modList=$2
 
-	declare replacements=(
+	declare replacements=(5
 		"[ModInstaller]=ModIDS=$modList"
-		"[/script/shootergame.shootergamemode]=MatingIntervalMultiplier=0.5"
-		"[/script/shootergame.shootergamemode]=EggHatchSpeedMultiplier=4.0"
+		"[/script/shootergame.shootergamemode]=MatingIntervalMultiplier=0.2"
+		"[/script/shootergame.shootergamemode]=EggHatchSpeedMultiplier=8.0"
 		"[/script/shootergame.shootergamemode]=BabyMatureSpeedMultiplier=8.0"
 		"[/script/shootergame.shootergamemode]=BabyImprintAmountMultiplier=4.0"
 		"[/script/shootergame.shootergamemode]=HexagonRewardMultiplier=1.5"
-		"[/script/shootergame.shootergamemode]=BabyCuddleIntervalMultiplier=0.6"
+		"[/script/shootergame.shootergamemode]=BabyCuddleIntervalMultiplier=0.1"
+		"[/script/shootergame.shootergamemode]=bDisableStructurePlacementCollision=True"
 	)
 
 	updateFile $1 $replacements
@@ -111,7 +112,7 @@ function verifyFile() {
 root=${1%$'/'}
 echo -e "${INFO} Using Root Path: $root"
 
-modList="793605978,2357644511,2473361032,1380777369,2147192126,1984936918,670764308,731604991,2664227681"
+modList="2357644511,1380777369"
 echo -e "${INFO} Mods: $modList"
 
 if [ -d $root ];
