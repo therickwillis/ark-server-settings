@@ -1,0 +1,5 @@
+{
+    "serverName": "MyARKServer",
+    "startingPort": 7777,
+    "modList": [123456, 789012, 345678]
+}
